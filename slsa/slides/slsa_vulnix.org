@@ -1,0 +1,42 @@
+#+TITLE: Supply Chain Security
+#+AUTHOR: Aleksandr Tserepov-Savolainen
+#+OPTIONS: H:2 toc:t num:t
+#+LATEX_CLASS: beamer
+#+LATEX_CLASS_OPTIONS: [presentation]
+#+BEAMER_THEME: Madrid
+#+COLUMNS: %45ITEM %10BEAMER_ENV(Env) %10BEAMER_ACT(Act) %4BEAMER_COL(Col)
+
+* Supply Chain Security
+* Vulnix
+
+** Problem statement
+[[file:supply-chain-threats.png]]
+image src: https://slsa.dev/spec/v0.1/#supply-chain-threats
+
+** SLSA Framework
+*** Source Integrity
+Ensuring every change reflects the intent of producer.
+
+*** Build Integrity
+    :PROPERTIES:
+    :BEAMER_ACT: <2->
+    :END:
+Ensuring artifacts are not modified on transit between stages of the Supply Chain.
+
+*** Availability
+    :PROPERTIES:
+    :BEAMER_ACT: <3->
+    :END:
+Ensuring that all code and change history are available for potential incident investigation.
+
+** SCA (Software Composition Analysis)
+- Automated process that defines the open source software in the codebase.
+- Companies need to be aware of potential obligations, limitations and security vulnerabilities that open source brings into play.
+- As the codebase grows, tracking all of those becomes rather tricky.
+- SCA takes use of automatic scanners to enable productivity without compromise on security.
+
+** [Vulnix] Theory of operation
+** [Vulnix] Pros
+** [Vulnix] Cons
+** [Vulnix] Demo
+
