@@ -59,6 +59,6 @@ Ensuring that all code and change history are available for potential incident i
 
 ** Discussion & Demo
 \begin{center}
-\Huge Questions?
+\Huge Discussion and Demo!
 \end{center}
 
