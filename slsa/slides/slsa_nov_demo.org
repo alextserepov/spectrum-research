@@ -1,0 +1,81 @@
+#+TITLE: Supply Chain Security
+#+AUTHOR: Aleksandr Tserepov-Savolainen
+#+OPTIONS: H:2 toc:t num:t
+#+LATEX_CLASS: beamer
+#+LATEX_CLASS_OPTIONS: [presentation]
+#+BEAMER_THEME: Singapore
+#+COLUMNS: %45ITEM %10BEAMER_ENV(Env) %10BEAMER_ACT(Act) %4BEAMER_COL(Col)
+
+* Supply Chain Security
+
+** Problem statement
+[[file:supply-chain-threats.png]]
+image src: https://slsa.dev/spec/v0.1/#supply-chain-threats
+
+** Breach cases
+TODO: Move links
+*** 1959 CIA intercepted a USSR lunar probe
+https://www.cia.gov/readingroom/collection/lunik-loan-space-age-spy-story
+*** 2014 3rd party vendor credential leak on Home Depot's credit card terminals
+https://www.computerweekly.com/news/2240234281/Home-Depot-traces-credit-card-data-hack-to-supplier-compromise
+*** 2021 backdoor in the open source PHP Git server
+https://news-web.php.net/php.internals/113838
+
+** SLSA Framework
+*** Source Integrity
+Ensuring every change reflects the intent of producer.
+
+*** Build Integrity
+    :PROPERTIES:
+    :BEAMER_ACT: <2->
+    :END:
+Ensuring artifacts are not modified on transit between stages of the Supply Chain.
+
+*** Availability
+    :PROPERTIES:
+    :BEAMER_ACT: <3->
+    :END:
+Ensuring that all code and change history are available for potential incident investigation.
+
+
+** NixOS / Spectrum Build Environment
+TODO: Build environment picture
+
+Hydra -> BinCache -> Jenkins -> Release
+  
+  + --- TII GitHub
+  + --- OpenSrc locations 
+
+** NixOS SLSA Solution
+*** Hydra package signing
+*** Binary cache package signing
+*** Jenkins package signature verification
+
+** SCA (Software Composition Analysis)
+- Automated process that defines the open source software in the codebase.
+- Companies need to be aware of potential obligations, limitations and security vulnerabilities that open source brings into play.
+- As the codebase grows, tracking all of those becomes rather tricky.
+- SCA takes use of automatic scanners to enable productivity without compromise on security.
+
+* Vulnix
+
+** [Vulnix] Theory of operation
+- Pulls all known CVEs from NVD
+- Matches a list of derivations against CVE entries
+- Whitelisting is used to suppress unwanted results
+
+** [Vulnix] Pros & Cons
+*** Pros
+    :PROPERTIES:
+    :BEAMER_ACT: <2->
+    :END:
+- Fast
+- Easy integration
+- Written in Python - easy to maintain
+
+*** Cons
+    :PROPERTIES:
+    :BEAMER_ACT: <3->
+    :END:
+- Simplistic mapping can lead to false positives / negatives
+- Inactive development
