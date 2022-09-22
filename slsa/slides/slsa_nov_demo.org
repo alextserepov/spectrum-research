@@ -9,7 +9,7 @@
 * Supply Chain Security
 
 ** Problem statement
-[[file:supply-chain-threats.png]]
+[[file:./images/supply-chain-threats.png]]
 image src: https://slsa.dev/spec/v0.1/#supply-chain-threats
 
 ** Breach cases
@@ -51,14 +51,18 @@ Hydra -> BinCache -> Jenkins -> Release
 *** Binary cache package signing
 *** Jenkins package signature verification
 
+
+* SCA & Vulnix
+
 ** SCA (Software Composition Analysis)
 - Automated process that defines the open source software in the codebase.
 - Companies need to be aware of potential obligations, limitations and security vulnerabilities that open source brings into play.
 - As the codebase grows, tracking all of those becomes rather tricky.
 - SCA takes use of automatic scanners to enable productivity without compromise on security.
 
-* Vulnix
-
+** Look & Feel
+TODO: Vulnix results screenshot here
+[[file:./images/vulnix_screenshot.png]]
 ** [Vulnix] Theory of operation
 - Pulls all known CVEs from NVD
 - Matches a list of derivations against CVE entries
