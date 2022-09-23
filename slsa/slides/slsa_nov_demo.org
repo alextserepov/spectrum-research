@@ -82,7 +82,7 @@ Hydra -> BinCache -> Jenkins -> Release
 - SCA takes use of automatic scanners to enable productivity without compromise on security.
 
 ** Look & Feel
-file:./images/vulnix_screenshot.png]]
+[[file:./images/vulnix_screenshot.png]]
 ** [Vulnix] Theory of operation
 - Pulls all known CVEs from NVD
 - Matches a list of derivations against CVE entries
