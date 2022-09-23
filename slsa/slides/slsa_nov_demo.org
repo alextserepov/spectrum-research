@@ -37,6 +37,27 @@ Ensuring artifacts are not modified on transit between stages of the Supply Chai
     :END:
 Ensuring that all code and change history are available for potential incident investigation.
 
+** Levels of Assurance
+*** Level 1
+    :PROPERTIES:
+    :BEAMER_ACT: <2->
+    :END:
+Easy to adopt, offering supply chain visibility and generating provenance
+*** Level 2
+    :PROPERTIES:
+    :BEAMER_ACT: <3->
+    :END:
+Minimal build integrity, minimal SW tampering protection
+*** Level 3
+    :PROPERTIES:
+    :BEAMER_ACT: <4->
+    :END:
+Hardened infrastructure, trust integration
+*** Level 4
+    :PROPERTIES:
+    :BEAMER_ACT: <5->
+    :END:
+The highest assurance of build integrity and dependency management
 
 ** NixOS / Spectrum Build Environment
 TODO: Build environment picture
@@ -61,8 +82,7 @@ Hydra -> BinCache -> Jenkins -> Release
 - SCA takes use of automatic scanners to enable productivity without compromise on security.
 
 ** Look & Feel
-TODO: Vulnix results screenshot here
-[[file:./images/vulnix_screenshot.png]]
+file:./images/vulnix_screenshot.png]]
 ** [Vulnix] Theory of operation
 - Pulls all known CVEs from NVD
 - Matches a list of derivations against CVE entries
