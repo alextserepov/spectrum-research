@@ -13,7 +13,7 @@
 image src: https://slsa.dev/spec/v0.1/#supply-chain-threats
 
 ** Breach cases
-TODO: Move links
+TODO: This one is just an example. Work needed.
 *** 1959 CIA intercepted a USSR lunar probe
 https://www.cia.gov/readingroom/collection/lunik-loan-space-age-spy-story
 *** 2014 3rd party vendor credential leak on Home Depot's credit card terminals
