@@ -10,7 +10,6 @@
 
 ** Problem statement
 [[file:./images/supply-chain-threats.png]]
-image src: https://slsa.dev/spec/v0.1/#supply-chain-threats
 
 ** Breach cases
 
@@ -62,13 +61,12 @@ Hydra -> BinCache -> Jenkins -> Release
   + --- TII GitHub
   + --- OpenSrc locations 
 
-** NixOS SLSA Solution
-*** Hydra package signing
-*** Binary cache package signing
-*** Jenkins package signature verification
+** Nix Tooling SLSA Solution
+- package signing during build
+- Package signing during sharing
+- Package signature verification during testing stages
 
-
-* SCA & Vulnix
+* SCA, SBOM & Vulnix
 
 ** SCA (Software Composition Analysis)
 - Automated process that defines the open source software in the codebase.
@@ -76,25 +74,14 @@ Hydra -> BinCache -> Jenkins -> Release
 - As the codebase grows, tracking all of those becomes rather tricky.
 - SCA takes use of automatic scanners to enable productivity without compromise on security.
 
-** Look & Feel
-[[file:./images/vulnix_screenshot.png]]
+** SBOM (Software Bill of Materials)
+- List of software components in a derivation
+- Generated at the build time by the build system
+- Serves as part of build provenance
+- Stored inside of the software package
+- Is signed at the build stage
+
 ** [Vulnix] Theory of operation
 - Pulls all known CVEs from NVD
 - Matches a list of derivations against CVE entries
 - Whitelisting is used to suppress unwanted results
-
-** [Vulnix] Pros & Cons
-*** Pros
-    :PROPERTIES:
-    :BEAMER_ACT: <2->
-    :END:
-- Fast
-- Easy integration
-- Written in Python - easy to maintain
-
-*** Cons
-    :PROPERTIES:
-    :BEAMER_ACT: <3->
-    :END:
-- Simplistic mapping can lead to false positives / negatives
-- Inactive development
