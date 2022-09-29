@@ -53,7 +53,7 @@ Hardened infrastructure, trust integration
     :END:
 The highest assurance of build integrity and dependency management
 
-** NixOS / Spectrum Build Environment
+** SpectrumOS Build Environment
 TODO: Build environment picture
 
 Hydra -> BinCache -> Jenkins -> Release
